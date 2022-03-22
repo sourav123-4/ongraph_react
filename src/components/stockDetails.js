@@ -14,18 +14,16 @@ export default function StockDetails(props) {
             setName(resjson1.Name)
             setAssetType(resjson1.AssetType)
             setDescription(resjson1.Description)
-
         }
         if (props.name) { fetchApi1() }
     }, [props.name])
-    console.log(props.name)
+
     return (
         <div>
             <p>Symbol :{symbol}</p>
             <p>AssetType:{assetType}</p>
             <p>Name :{name}</p>
             <p>Description :{description}</p>
-
         </div>
 
     )

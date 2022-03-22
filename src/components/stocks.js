@@ -37,7 +37,7 @@ export default function Stocks() {
                     )}
                 </div>)}
             <StocksDetails name={details} />
-            <AddDetails />
+            <AddDetails name={details} />
         </div>
     )
 }
