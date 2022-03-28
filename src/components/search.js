@@ -1,4 +1,5 @@
 import React from 'react'
+import './styles/search.css'
 export default function Search(props) {
     const [search, setSearch] = React.useState("")
     const [value, setValue] = React.useState("")
@@ -17,17 +18,15 @@ export default function Search(props) {
         setSearch(value)
     }
     return (
-        <div>
-            <div className='stocksdiv'>
-                <input
-                    type="search"
-                    className='input-box'
-                    name='searchinput'
-                    value={value}
-                    onChange={(event) => { setValue(event.target.value) }}
-                />
-                <button onClick={handleClick}>Search</button>
-            </div>
+        <div className='search'>
+            <input
+                type="search"
+                className='search-input'
+                name='searchinput'
+                value={value}
+                onChange={(event) => { setValue(event.target.value) }}
+            />
+            <button onClick={handleClick} >Search</button>
         </div>
     )
 }

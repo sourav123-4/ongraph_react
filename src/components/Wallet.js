@@ -1,9 +1,9 @@
 import React from 'react'
-export default function Wallet() {
-    const [money, setMoney] = React.useState(10000)
+import './styles/wallet.css'
+export default function Wallet(props) {
     return (
-        <div>
-            <h1>Wallet:${money}</h1>
+        <div className='wallet'>
+            <h1>Wallet:${props.money}</h1>
         </div>
     )
 }

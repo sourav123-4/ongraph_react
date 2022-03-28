@@ -1,0 +1,10 @@
+.mystocks{
+    grid-column-start:1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    background-color: rgb(21, 21, 247);
+    padding: 1em;
+    margin: .1em;
+    border-radius: 5px;
+}

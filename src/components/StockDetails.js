@@ -1,4 +1,5 @@
 import React from 'react'
+import './styles/stockdetails.css'
 export default function StockDetails(props) {
     const [symbol, setSymbol] = React.useState("")
     const [assetType, setAssetType] = React.useState("")
@@ -17,12 +18,21 @@ export default function StockDetails(props) {
         }
         fetchApi1()
     }, [props.details])
+    React.useEffect(() => {
+        const fetchApi2 = async () => {
+            const url = `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${props.details}&apikey=0QENXP8HOKV0KWV2`
+            const res = await fetch(url)
+            const resjson1 = await res.json()
+            props.setShare(resjson1['Global Quote']['05. price'])
+        }
+        fetchApi2()
+    }, [props.details])
     return (
-        <div>
-            <p><span>Symbol :</span> {symbol}</p>
-            <p><span>AssetType:</span> {assetType}</p>
-            <p><span>Name :</span> {name}</p>
-            <p><span>Description :</span> {description}</p>
+        <div className='stock-details'>
+            <p><span>Symbol : </span> {symbol}</p>
+            <p><span>AssetType : </span> {assetType}</p>
+            <p><span>Name : </span> {name}</p>
+            <p><span>Description : </span> {description}</p>
         </div>
     )
 }
