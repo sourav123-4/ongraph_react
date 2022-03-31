@@ -1,6 +1,7 @@
 .search{
     grid-column-start: 5;
     grid-column-end:10;
+    margin-top: .1em;
 }
 .search-input{
     height: 2.6em;

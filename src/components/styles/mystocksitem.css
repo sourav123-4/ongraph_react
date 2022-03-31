@@ -1,3 +1,8 @@
-.mystocksitem{
-    grid-column-start: 2;
+.mystocksitem>div>input{
+    border-radius: 3px;
+}
+.mystocksitem>div>button{
+    border-radius: 3px;
+    font-weight: bolder;
+    margin-left: .1em;
 }
